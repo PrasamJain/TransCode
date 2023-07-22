@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #333;
+    color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .navbar-heading {
+    margin: 0;
+  }
+  
+  .navbar-options {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-option a {
+    color: rgb(177, 177, 177);
+    text-decoration: none;
+  }
+  
+  .navbar-option a:hover {
+    color: rgb(255, 255, 255);
+  }
+  
