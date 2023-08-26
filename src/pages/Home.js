@@ -7,6 +7,7 @@ function Home() {
   const [apiKeyValid, setApiKeyValid] = useState(false);
 
   const handleApiKeyChange = (e) => {
+    console.log(e.target);
     setApiKey(e.target.value);
   };
 
@@ -20,7 +21,7 @@ function Home() {
     const valid = apiKeyInput.trim() !== '';
     setApiKeyValid(valid);
   };
-  console.log(apiKeyInput)
+  // console.log(apiKeyInput)
   return (
     <div className="home">
       <div className="api-key-input">
@@ -41,19 +42,27 @@ function Home() {
           {apiKeyValid ? (
             <>
               <Link
-                to="/service-1"
+                to="/convert-code"
                 className="option"
                 state={{ apiKey: apiKeyInput }}
               >
-                services 1
+                Convert code
               </Link>
 
               <Link
-                to="/service-2"
+                to="/natural-lang-sql"
                 className="option"
                 state={{ apiKey: apiKeyInput }}
               >
-                services 2
+                Natural language to SQL
+              </Link>
+
+              <Link
+                to="/code-explaination"
+                className="option"
+                state={{ apiKey: apiKeyInput }}
+              >
+                Code-Explaination
               </Link>
             </>
           ) : (

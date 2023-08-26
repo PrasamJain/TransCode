@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Configuration, OpenAIApi } from 'openai';
-import './Grammar.css';
+import './NlpSql.css';
 
 
-function Grammar() {
+function NlpSql() {
 
   const location = useLocation();
   const { apiKey } = location.state;
@@ -26,9 +26,9 @@ function Grammar() {
       try {
         const response = await openai.createCompletion({
           model: 'text-davinci-003',
-          prompt: `Fix the grammar in the following text:\n\n ${inputValue}`,
-          temperature: 1,
-          max_tokens: 256,
+          prompt: `Convert natural language into SQL queries\n\n ${inputValue}`,
+          temperature: 0,
+          max_tokens: 1024,
           top_p: 1,
           frequency_penalty: 0,
           presence_penalty: 0,
@@ -39,26 +39,26 @@ function Grammar() {
         setOutputValue(enhancedText);
       } catch (error) {
         console.log('API call error:', error);
-        setOutputValue('Failed to perform grammar correction. Please try again.');
+        setOutputValue('Failed to perform sql correction. Please try again.');
       }
     }
   };
 
   return (
     <div className="Grammar">
-      <h2>Grammar-Enhancer</h2>
+      <h2>Natural language to SQL</h2>
       <div className="box-container">
         <div className="input-box">
-        <h3>Input:</h3>
+        <h3>Natural Language</h3>
           <textarea
-            placeholder="Type a message..."
+            placeholder="Type a natural language query..."
             value={inputValue}
             onChange={handleInputChange}
           />
         </div>
         <button onClick={handleMessageSend}>Send</button>
         <div className="output-box">
-          <h3>Output:</h3>
+          <h3>SQL Query</h3>
           <div className="output">{outputValue}</div>
         </div>
       </div>
@@ -67,4 +67,4 @@ function Grammar() {
 }
 
 
-export default Grammar;
+export default NlpSql;

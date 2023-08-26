@@ -1,0 +1,65 @@
+.Pros {
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to a new line on smaller screens */
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top within the container */
+    margin-top: 2rem;
+}
+
+.input-box,
+.output-box {
+    flex: 1; /* Equal width for input and output boxes */
+    padding: 1rem;
+    margin: 0.5rem; /* Add some spacing between boxes */
+    box-sizing: border-box; /* Include padding in box dimensions */
+    max-width: 100%; /* Prevent boxes from exceeding the container width */
+}
+
+.input-box textarea,
+.output {
+    width: 90%; /* Make sure the content stretches to fill the box */
+    height: 200px;
+    padding: 1rem;
+    font-size: large;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 10px;
+    margin-top: 180px; /* Center the button horizontally and add spacing around it */
+    display: block; /* Make the button a block element to center it horizontally */
+    border: none;
+    background-color: #555;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+button:hover {
+    background-color: #777;
+}
+
+.output-box h3 {
+    margin-top: 0;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 1300px) {
+    .box-container {
+        flex-direction: column;
+    }
+
+    .input-box {
+        width: 100%; /* Occupy the full width on smaller screens */
+    }
+
+    .output-box {
+        width: 100%;
+    }
+}

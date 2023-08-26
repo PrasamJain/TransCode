@@ -3,6 +3,9 @@
 }
 
 .api-key-input {
+  display: flex; /* Display input and button in a row */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Center items horizontally */
   margin-bottom: 16px;
 }
 
@@ -14,9 +17,23 @@
   border-radius: 4px;
 }
 
+.api-key-input button {
+  padding: 8px 16px;
+  margin: 8px; /* Add some space between input and button */
+  border: none;
+  background-color: #555;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.api-key-input button:hover {
+  background-color: #777;
+}
+
 .services-box {
   border: 1px solid #ccc;
-  margin-top: 1px;
+  margin-top: 100px;
 }
 
 .options {
