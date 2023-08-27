@@ -44,7 +44,7 @@ const ProsCons = () => {
 
   return (
     <div className="Pros">
-      <h2>Pro and con discusser</h2>
+      <h2>Code Converter</h2>
       <div className="box-container">
         <div className="input-box">
         <h3>Input:</h3>

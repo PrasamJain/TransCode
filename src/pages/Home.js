@@ -46,7 +46,7 @@ function Home() {
                 className="option"
                 state={{ apiKey: apiKeyInput }}
               >
-                Convert code
+                Code Converter
               </Link>
 
               <Link

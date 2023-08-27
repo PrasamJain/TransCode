@@ -43,7 +43,7 @@ const Code = () => {
       }
 
   return (
-    <div className="Pros">
+    <div className="code">
     <h2>Code Explaination</h2>
     <div className="box-container">
       <div className="input-box">
